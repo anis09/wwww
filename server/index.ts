@@ -34,7 +34,7 @@ io.on("connection", (socket) => {
     socket.join(data);
     messageModel.find({}, { author: "$author" }).then((result) => {
       socket.emit("users__history", result);
-      console.log(result);
+      
     });
   });
 
